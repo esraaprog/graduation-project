@@ -18,9 +18,18 @@ class _DoctorhomescreenState extends State<Doctorhomescreen> {
   child: Scaffold(
     appBar: AppBar(
         backgroundColor: Colors.deepOrange,
-        leading: IconButton(onPressed: (){
-          
-        }, icon:Icon(Icons.menu,color: Colors.white,),),
+        leading: PopupMenuButton<String>(
+       
+  onSelected: (value) {
+    if (value == 'Settings') {
+      // انتقل إلى صفحة الإعدادات
+    }
+  },
+  itemBuilder: (BuildContext context) {
+   
+         
+        },
+         icon:Icon(Icons.menu,color: Colors.white,),),
         title: Text('My Profile',
         style: TextStyle(
           color: Colors.white,
