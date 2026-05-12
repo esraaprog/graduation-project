@@ -26,9 +26,13 @@ class _DoctorhomescreenState extends State<Doctorhomescreen> {
     }
   },
   itemBuilder: (BuildContext context) {
-   
-         
-        },
+    return [
+      const PopupMenuItem<String>(
+        value: 'Settings',
+        child: Text('Settings'),
+      ),
+    ];
+  },
          icon:Icon(Icons.menu,color: Colors.white,),),
         title: Text('My Profile',
         style: TextStyle(
