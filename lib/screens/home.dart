@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/services/alarm_edit_dialog.dart.dart';
+import 'package:alarm/services/alarm_edit_dialog.dart.dart';
 import '../models/alarm_model.dart';
 import '../services/alarm_service.dart';
 import '../services/alarm_storage_service.dart';

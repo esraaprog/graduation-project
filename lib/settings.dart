@@ -1,3 +1,4 @@
+import 'package:alarm/accountInformation.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
@@ -8,6 +9,8 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
+  bool notificationsEnabled = true;
+  bool darkModeEnabled = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +31,12 @@ class _SettingsState extends State<Settings> {
           ListTile(
             leading: Icon(Icons.person),
             title: Text("Account Information"),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AccountInformation()),
+              );
+            },
           ),
 
           ListTile(
@@ -49,13 +57,23 @@ class _SettingsState extends State<Settings> {
           ListTile(
             leading: Icon(Icons.notifications),
             title: Text("Notifications"),
-            trailing: Switch(value: true, onChanged: (val) {}),
+            trailing: Switch(value: notificationsEnabled, onChanged: (val) {
+              setState(() {
+                notificationsEnabled = val;
+              });
+            }, 
+            activeColor: Colors.deepOrange,
+            ),
           ),
 
           ListTile(
             leading: Icon(Icons.dark_mode),
             title: Text("Dark Mode"),
-            trailing: Switch(value: false, onChanged: (val) {}),
+            trailing: Switch(value: darkModeEnabled, onChanged: (val) {
+              setState(() {
+                darkModeEnabled = val;
+              });
+            }, activeColor: Colors.deepOrange,),
           ),
 
           Divider(),

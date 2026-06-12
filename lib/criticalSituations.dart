@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
  Widget  criticalSituation(){
       
    return   ListView.builder(
-        itemCount: 5,
+        itemCount: 20,
         itemBuilder: (context, index) {
           return Card(
             margin: EdgeInsets.symmetric(horizontal: 15, vertical: 8),
@@ -17,12 +17,18 @@ import 'package:flutter/material.dart';
            
                   _showDecisionBottomSheet(context);
                 },
-                child: Text('Proceed'),
+                child: Text('Proceed' , style: TextStyle(color: Colors.deepOrangeAccent),),
+                // style: ElevatedButton.styleFrom(
+                //   backgroundColor: Colors.deepOrange, // Change background color
+                //   foregroundColor: Colors.white, // Change text color
+                // ),
               ),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder:  (context) => const PatientProfil()));
               },
+
             ),
+          
           );
         },
       );

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
     return Scaffold(
      
       body: ListView.builder(
-        itemCount: 5,
+        itemCount: 20,
         itemBuilder: (context, index) {
           return Card(
             margin: EdgeInsets.symmetric(horizontal: 15, vertical: 8),
